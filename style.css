@@ -1,0 +1,50 @@
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+html {
+
+    /* Light Mode Variables */
+
+    --l-mode-app-background: #fff;
+    --l-mode-text: #494C6B;
+    --l-mode-stroke: #E3E4F1;
+    --l-mode-background-gradient-blue: #5596FF;
+    --l-mode-background-gradient-purple: #AC2DEB;
+    --l-mode-check-gradient-blue: #55DDFF;
+    --l-mode-check-gradient-purple: #C058F3;
+
+    /* Dark Mode Variables */
+
+    --d-mode-app-background: #393A4B;
+    --d-mode-text: #C8CBE7;
+    --d-mode-stroke: #494C6B;
+    --d-mode-main-background: #25273D;
+    --d-mode-background-gradient-blue: #3710BD;
+    --d-mode-background-gradient-pink: #A42395;
+
+    /* Both Modes */
+
+    --controls-active-text: #3A7CFD;
+}
+
+
+/* Banner */
+
+.hero {
+    height: 40vh;
+    background-image: url('resources/rohit-tandon-9wg5jCEPBsw-unsplash.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
