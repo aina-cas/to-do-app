@@ -14,7 +14,7 @@
 
 html {
 
-    /* Light Mode Variables */
+    /* Light Mode Color Variables */
 
     --l-mode-app-background: #fff;
     --l-mode-text: #494C6B;
@@ -36,15 +36,97 @@ html {
     /* Both Modes */
 
     --controls-active-text: #3A7CFD;
+    --main-font: 'Josefin Sans';
 }
 
 
 /* Banner */
 
 .hero {
-    height: 40vh;
-    background-image: url('resources/rohit-tandon-9wg5jCEPBsw-unsplash.jpg') ;
+    height: 35vh;
+    background-image: url('resources/rohit-tandon-9wg5jCEPBsw-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
+    position: relative;
+    top: -35vh;
+}
+
+.hero-gradient {
+    background-image: linear-gradient(10deg, var(--l-mode-background-gradient-purple),var(--l-mode-check-gradient-blue));
+    height: 35vh;
+    position: relative;
+    opacity: .7;
+    z-index: 1;
+}
+
+
+
+
+
+/* Todo App */
+
+.todo-container {
+    width: 540px;
+    margin: 0 auto;
+    position: relative;
+    top: -55vh;
+    z-index: 100;
+}
+
+/* Todo container header */
+
+.todo-container .header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.todo-container .header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Toggle button */
+
+.toggle-theme {
+    background-image: url('resources/moon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+
+/* Create new todo...*/
+
+.new-todo {
+    background-color: var(--l-mode-app-background);
+    height: 64px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+
+.new-todo-input {
+    font-family: var(--main-font);
+    font-size: 1rem;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+}
+
+.new-todo-check {
+  
+}
+
+/* Hide default checkbox*/
+input[type=checkbox] {
+    visibility: hidden;
 }
