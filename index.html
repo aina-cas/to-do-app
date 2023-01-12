@@ -11,6 +11,7 @@
     <title>To Do App</title>
 </head>
 <body>
+   <main>
     <section class="hero-gradient"></section>
     <section class="hero"></section>
     <div class="todo-container">
@@ -18,14 +19,45 @@
             <h1>To Do</h1>
             <button class="toggle-theme"></button>
         </div>
-        <div class="new-todo">
-            <input type="checkbox" class="new-todo-check">
-            <input type="text" class="new-todo-input" placeholder="Create a new todo...">
-        </div>
-        <div class="todo-list">
-        </div>
+        <form class="new-todo">
+            <input 
+                   type="submit" 
+                   value=""
+                   class="new-todo-check" 
+                   id="user-input">
+            <input 
+                   type="text" 
+                   name="user-input"
+                   id="user-input"
+                   class="new-todo-input" 
+                   placeholder="Create a new todo...">
+        </form>
+        <section class="todo-list">
+            <div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    <div class="todo-conten">
+                        <input type="text" value="Item to do1" readonly>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="todo-list">
+            <div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    <div class="todo-conten">
+                        <input type="text" value="Item to do2" readonly>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer class="controls">
-            <p> <span class="items-left"> items left</span> </p>
+            <p><span class="items-left">0</span> items left</p>
             <div class="all-active-completed">
                 <button class="all">All</button>
                 <button class="active">Active</button>
@@ -35,5 +67,6 @@
         </footer>
     </div>
     
+   </main>
 </body>
 </html>
