@@ -85,3 +85,51 @@ main {
     z-index: 100;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    letter-spacing: 10px;
+} 
+
+.toggle-btn {
+     background-image: url('resources/sun.svg');
+     background-size: cover;
+     width: 30px;
+     height: 30px;
+
+}
+
+.type-todo {
+    margin-top: 24px;
+    width: 100%;
+    background: var(--app-background);
+    padding: 10px;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 10% auto;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--stroke);
+}
+
+#todo-input {
+    background: var(--app-background);
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+    color: var(--new-todo-text);
+    caret-color: var(--controls-active-text);
+}
+
+#todo-input:focus {
+    outline: none;
+}
