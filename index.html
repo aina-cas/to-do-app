@@ -23,6 +23,16 @@
             <input type="text" id="todo-input">
         </div>
         <div class="todos-container"></div>
+        <div class="controls">
+            <div class="completed-count"><span id="count">0</span> items left</div>
+            <div class="filters">
+                <div>All</div>
+                <div>Active</div>
+                <div>Completed</div>
+            </div>
+            <div onclick="clearCompleted()" class="clear">Clear Completed</div>
+        </div>
+        <p class="drag-drop">Drag and drop to reorder list</p>
     </main>
     <script src="app.js"></script>
 </body>

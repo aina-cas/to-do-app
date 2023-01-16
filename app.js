@@ -84,10 +84,10 @@ function newTodo(value) {
 // To check if the input is not empty and so the user can not add an empty todo item
 // To store the list after the page is refrehed 
 // To show how many items are left to do on the list 
-// Filter to show all todo items 
-// Filter to show active items 
-// Filter to show already completed items 
-// Clear all the completed 
+// Filter to show all todo items                     
+// Filter to show active items                       
+// Filter to show already completed items            
+// Clear all the completed                           
 // Drag and drop to reorder the list 
 
 //There might be more, but that's all I can think of for now.  
