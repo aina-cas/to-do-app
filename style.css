@@ -40,7 +40,7 @@ html {
     --app-background: #fff;
     --new-todo-text: hsl(235, 19%, 35%);
     --stroke: #E3E4F1;
-    --text: #C8CBE7;
+    --text: #9495A5;
     --main-background: #F2F2F2;
     --background-gradient-blue: #5596FF;
     --background-gradient-pink: #AC2DEB;
@@ -132,4 +132,40 @@ main {
 
 #todo-input:focus {
     outline: none;
+}
+
+.todos-container {
+    margin-top: 24px;
+}
+
+.todo {
+    background: var(--app-background);
+    width: 100%;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--text)
+}
+
+.todos-container .todo:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.todo input[type="checkbox"] {
+    display: none;
+}
+
+.active {
+    position: relative;
+    background-image: linear-gradient(#5596FF, #C058F3 );
+}
+
+.active::before {
+    content: "✓";
+    width: 10px;
+    height: 10px;
 }
