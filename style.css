@@ -9,35 +9,47 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 html {
 
-    /* Light Mode Color Variables */
-
-    --l-mode-app-background: #fff;
-    --l-mode-text: #494C6B;
-    --l-mode-stroke: #E3E4F1;
-    --l-mode-background-gradient-blue: #5596FF;
-    --l-mode-background-gradient-purple: #AC2DEB;
-    --l-mode-check-gradient-blue: #55DDFF;
-    --l-mode-check-gradient-purple: #C058F3;
-
     /* Dark Mode Variables */
 
-    --d-mode-app-background: #393A4B;
-    --d-mode-text: #C8CBE7;
-    --d-mode-stroke: #494C6B;
-    --d-mode-main-background: #25273D;
-    --d-mode-background-gradient-blue: #3710BD;
-    --d-mode-background-gradient-pink: #A42395;
+    --app-background: #393A4B;
+    --text: #C8CBE7;
+    --new-todo-text: #767992 ;
+    --stroke: #494C6B;
+    --main-background: #171823;
+    --background-gradient-blue: #3710BD;
+    --background-gradient-pink: #A42395;
+    --toggle-icon: url('resources/sun.svg');
 
     /* Both Modes */
 
+    --check-gradient-blue: #55DDFF;
+    --check-gradient-pink: #C058F3;
     --controls-active-text: #3A7CFD;
     --main-font: 'Josefin Sans';
+}
+
+/* Light Mode Color Variables */
+
+.light {
+    --app-background: #fff;
+    --new-todo-text: hsl(235, 19%, 35%);
+    --stroke: #E3E4F1;
+    --text: #C8CBE7;
+    --main-background: #F2F2F2;
+    --background-gradient-blue: #5596FF;
+    --background-gradient-pink: #AC2DEB;
+    --toggle-icon: url('resources/moon.svg')
+    
+}
+
+body {
+    background-color: var(--main-background);
 }
 
 
@@ -54,7 +66,7 @@ html {
 }
 
 .hero-gradient {
-    background-image: linear-gradient(10deg, var(--l-mode-background-gradient-purple),var(--l-mode-check-gradient-blue));
+    background-image: linear-gradient(10deg, var(--background-gradient-pink),var(--background-gradient-blue));
     height: 35vh;
     position: relative;
     opacity: .7;
@@ -62,183 +74,14 @@ html {
 }
 
 
-
-
-
 /* Todo App */
 
-.todo-container {
-    width: 33.75rem;
-    margin: 0 auto;
-    position: relative;
-    top: -52vh;
+main {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    padding: 25px;
+    top: 0;
     z-index: 100;
-    box-shadow: 0px 20px 20px -22px rgba(0,0,0,0.88);
-    -webkit-box-shadow: 0px 20px 20px -22px rgba(0,0,0,0.88);
-    -moz-box-shadow: 0px 20px 20px -22px rgba(0,0,0,0.88);
-}
-
-/* Todo container header */
-
-.todo-container .header {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    
-}
-
-.todo-container .header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* Toggle button */
-
-.toggle-theme {
-    background-image: url('resources/moon.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1.85rem;
-    width: 1.85rem;
-    border: none;
-    background-color: transparent;
-}
-
-
-/* Create new todo...*/
-
-.new-todo {
-    background-color: var(--l-mode-app-background);
-    height: 4rem;
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    border-radius: 5px;
-    
-}
-
-.new-todo input[type="text"] {
-    font-family: var(--main-font);
-    font-size: 1rem;
-    width: 90%;
-    border: none;
-    border-radius: 5px;
-    
-}
-
-/* Todo List section */
-
-.todo-list {
-    background-color: var(--l-mode-app-background);
-    border-radius: 5px;
-    margin-top: 1.5rem;
-}
-
-.todo-item {
-    display: inline-flex;
-    height: 4rem;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1.2px solid var(--l-mode-stroke);
-}
-
-.todo-content {
-    width: 90%;
-
-}
-
-
-.todo-content input {
-    font-size: 1rem;
-    color: var(--l-mode-text)
-}
-
-
-
-/* Hide default submit button and change it to custom checkbox */
-
-input[type=submit] {
-    -webkit-appearance: none;
-    appearance: none; 
-    background-color: transparent;
-    font: inherit;
-    width: 1.5em;
-    height: 1.5em;
-    border: 1px solid var(--l-mode-stroke);
-    border-radius: 50%;
-    margin: auto;
-    cursor: pointer;
-} 
-
-/* Hide default input and button styles */
-
-input:not([type="submit"]), button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-}
-
-
-/* New Checkbox */
-
-.new-checkbox {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--l-mode-stroke);
-}
-
-/* Align new checkboxes*/
-
-.todo-item label {
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-
-}
-
-
-
-
-/* Footer of the app*/
-
-.controls {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: var(--l-mode-app-background);
-    height: 4rem;
-    align-items: stretch;
-    border-radius: 5px;
-}
-
- 
-
-.controls p {
-    display: inline-flex;
-    align-items: center;
-    white-space: pre;
-    font-size: 0.85rem;
-    margin-left: 1rem;
-    
-}
-
-.all-active-completed {
-    height: 100%;
-    display: flex;
-    color: var(--d-mode-text);
-    justify-content: space-between;
-    width: 30%
-    
-}
-
-.clear-completed {
-    margin-right: 1rem;
 }
 
