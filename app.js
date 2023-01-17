@@ -28,6 +28,8 @@ todoInput.addEventListener("keyup", handleTodoInput);
 function newTodo(value) {
     // Create the html elements for the todo
     const todo = document.createElement('div');
+    // Add draggable attribute to the div 
+    todo.draggable = true;
     const todoText = document.createElement('p');
     const todoCheckBox = document.createElement('input');
     const todoCheckBoxLabel = document.createElement('label');
