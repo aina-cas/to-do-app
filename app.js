@@ -5,6 +5,7 @@ function changeTheme () {
 }
 
 const todoInput = document.querySelector("#todo-input");
+// Array of objects to be used in later functions
 const todos = [];
 
 // Funtction to hadle the user input when they press enter
@@ -81,6 +82,7 @@ function newTodo(value) {
 
 // further functions needed:
 
+// Filter if a task already exists and if so, prevent from adding to the todos
 // To check if the input is not empty and so the user can not add an empty todo item
 // To store the list after the page is refrehed 
 // To show how many items are left to do on the list 
