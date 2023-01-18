@@ -60,7 +60,7 @@ body {
     background-image: url('resources/rohit-tandon-9wg5jCEPBsw-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     position: relative;
     top: -35vh;
 }
@@ -147,8 +147,11 @@ main {
     align-items: center;
     padding: 10px;
     font-size: 20px;
-    color: var(--text)
+    color: var(--text);
+    border-bottom: var(--stroke) solid 1px;
 }
+
+
 
 .todos-container .todo:first-child {
     border-top-left-radius: 5px;
@@ -157,6 +160,14 @@ main {
 
 .todo input[type="checkbox"] {
     display: none;
+}
+
+.x {
+    opacity: 0;
+}
+
+.x:hover {
+    opacity: 1;
 }
 
 .active {
@@ -178,9 +189,10 @@ main {
     background: var(--app-background);
     height: 55px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .controls div {
@@ -193,7 +205,7 @@ main {
     background: var(--app-background);
     height: 55px;
     position: absolute;
-    bottom: -70px;
+    bottom: -80px;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -214,3 +226,57 @@ main {
     width: 100%;
     text-align: center;
 }
+
+/* Media queries */
+
+@media screen and (min-width: 841px) and  (max-width: 1300px) { 
+    .header,
+    .type-todo,
+    .todos,
+    .todo,
+    .controls {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main {
+        top: 15vh;
+    }
+
+    .filters {
+        transform: translate(-50%);
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+    }
+  
+}
+
+@media screen and (min-width: 1301px) { 
+    .header,
+    .type-todo,
+    .todos,
+    .todo,
+    .controls {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main {
+        top: 15vh
+    }
+
+    .filters {
+        transform: translate(-50%);
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+    }
+
+    
+}
+

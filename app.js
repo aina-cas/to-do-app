@@ -94,4 +94,6 @@ function newTodo(value) {
 // Clear all the completed                           
 // Drag and drop to reorder the list 
 
+//Just thought about how would a user using a phone would press enter? 
+
 //There might be more, but that's all I can think of for now.  
