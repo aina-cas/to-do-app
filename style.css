@@ -218,6 +218,10 @@ main {
     font-size: 18px;
 }
 
+.filters div, .clear  {
+    cursor: pointer;
+}
+
 
 .completed-count {
     white-space: pre;
@@ -254,9 +258,7 @@ main {
         top: 0;
         bottom: 0;
         left: 50%;
-    }
-
-   
+    }  
 }
 
 @media screen and (min-width: 1301px) { 
