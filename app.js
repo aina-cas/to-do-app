@@ -8,17 +8,25 @@ const todoInput = document.querySelector("#todo-input");
 // Array of objects to be used in later functions
 const todos = [];
 
-// Funtction to hadle the user input when they press enter
+// Updated function to handle user input
 function handleTodoInput(event) {
-    // Check if the user pressed the enter key
-    if (event.key === "Enter" || event.keyCode === 13) {
-        // Add the new todo to the todos array
+  // Has the user pressed the enter key?
+  if (event.key === "Enter" || event.keyCode === 13) {
+    // Is new input empty? 
+    if (event.target.value !== null && event.target.value !== "") {
+      // Is there new data to save? Check all existing todos
+      const findExisting = todos.find(element => element.value === event.target.value);
+      // Add new todo 
+      if (findExisting === undefined) {
         todos.push({value: event.target.value, checked: false});
-        //Call the newTodo function to create a new todo item in the html
-        newTodo(event.target.value);
-        //Clear the input field after new todo item is added
+        newTodo(event.target.value); 
+        event.target.value = ""; 
+      } else {
+        alert("This todo already exists!");
         event.target.value = "";
+      }
     }
+  }
 }
 
 // Add event listener to the input field to call the handleTodoInput function when enter is pressed 
@@ -80,12 +88,18 @@ function newTodo(value) {
     todosContainer.appendChild(todo);
 }
 
+var activeButton = document.getElementById("active-btn");
+activeButton.addEventListener("click", toggleActive);                           // toggleActive function not created yet
+
+var completedButton = document.getElementById("completed-btn");
+completedButton.addEventListener("click", toggleCompleted);                     // toggleCompleted function not created yet
+
+var allButton = document.getElementById("all-btn");
+allButton.addEventListener("click", toggleAll);                                 // toggleAll function not created yet
 
 
 // further functions needed:
 
-// Filter if a task already exists and if so, prevent from adding to the todos
-// To check if the input is not empty and so the user can not add an empty todo item
 // To store the list after the page is refrehed 
 // To show how many items are left to do on the list 
 // Filter to show all todo items                     
