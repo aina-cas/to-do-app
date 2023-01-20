@@ -99,7 +99,7 @@ function newTodo(value) {
     const todosContainer = document.querySelector('.todos-container');
 
     // Append the todo to the container
-    todosContainer.appendChild(todo);
+    todosContainer.prepend(todo);
 }
 
 var activeButton = document.getElementById("active-btn");
