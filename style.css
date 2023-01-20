@@ -50,6 +50,7 @@ html {
 
 body {
     background-color: var(--main-background);
+    width: 100%;
 }
 
 
@@ -235,6 +236,27 @@ main {
     text-align: center;
 }
 
+.popup-message {
+    position: absolute;
+    width: auto;
+    font-family: var(--main-font);
+    background: var(--app-background);
+    font-size: 20px;
+    color: var(--text);
+    padding: 10px;
+    height: 55px;
+    border-radius: 5px;
+    top: 10vh;
+    text-align: center;
+    z-index: 99999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /* Media queries */
 
 @media screen and (min-width: 841px) and  (max-width: 1300px) { 
@@ -242,7 +264,8 @@ main {
     .type-todo,
     .todos,
     .todo,
-    .controls {
+    .controls
+     {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
@@ -250,6 +273,7 @@ main {
 
     main {
         top: 15vh;
+        
     }
 
     .filters {

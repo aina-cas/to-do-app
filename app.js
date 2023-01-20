@@ -22,8 +22,22 @@ function handleTodoInput(event) {
         newTodo(event.target.value); 
         event.target.value = ""; 
       } else {
-        alert("This todo already exists!");
-        event.target.value = "";
+        // Create a new element to display the pop up message
+        const messageDiv = document.createElement('div');
+        const message = document.createElement('p');
+        // Set text to the p element 
+        message.textContent = "This todo already exists!";
+        // Add class to parent 
+        messageDiv.classList.add("popup-message");
+        // Append the message to the parent element
+        messageDiv.appendChild(message);
+        // Append the parent container to the body 
+        document.body.appendChild(messageDiv);
+        // Use setTimeout to remove the message after 3 seconds
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 3000);
+         
       }
     }
   }
