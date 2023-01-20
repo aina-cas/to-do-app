@@ -32,6 +32,9 @@ html {
     --check-gradient-pink: #C058F3;
     --controls-active-text: #3A7CFD;
     --main-font: 'Josefin Sans';
+
+    scroll-behavior: smooth;
+    
 }
 
 /* Light Mode Color Variables */
@@ -50,7 +53,11 @@ html {
 
 body {
     background-color: var(--main-background);
-    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    
 }
 
 
@@ -79,11 +86,12 @@ body {
 
 main {
     position: absolute;
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 25px;
     top: 0;
     z-index: 100;
+    overflow-y: auto;
 }
 
 .header {
@@ -137,6 +145,10 @@ main {
 
 .todos-container {
     margin-top: 24px;
+    overflow: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    max-height: 500px;
 }
 
 .todo {
@@ -228,12 +240,21 @@ main {
     white-space: pre;
 }
 
-.drag-drop {
-    position: absolute;
-    bottom: 30px;
-    color: var(--new-todo-text);
+footer {
+    position: fixed ;
+    bottom: 0 ;
     width: 100%;
+    height: 55px;
+    color: var(--new-todo-text);
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
     text-align: center;
+    width: 100%;
 }
 
 .popup-message {
@@ -307,6 +328,8 @@ main {
         bottom: 0;
         left: 50%;
     }
+
+    
     
     
 
